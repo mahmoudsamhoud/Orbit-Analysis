@@ -13,7 +13,10 @@ root.withdraw()
 file_path = filedialog.askopenfilename(filetypes=[("Three Column CSV", "*.csv")])
 print(file_path)
 
-# Load Data (assumes three column array)
+# Load Data (assuming three column array)
+#t : time in seconds
+#x_bf : x displacement in um
+#y_bf : y displacement in um
 t,x_bf,y_bf = np.genfromtxt(file_path, delimiter=',', unpack=True)
 
 fc =24.97  #1x in Hz (input)
